@@ -33,7 +33,7 @@ contract RoboPunksNFT is ERC721, Ownable {
     baseTokenUri = _baseTokenUri;
   }
 
-  // from ERC721 - function that OpenSea calls to get iamge URI
+  // from ERC721 - function that OpenSea calls to get image URI
   function tokenURI(uint256 _tokenId) public view override returns (string memory) {
     require(_exists(_tokenId), "Token does not exist");
     return string(abi.encodePacked(baseTokenUri, Strings.toString(_tokenId), ".json"));
