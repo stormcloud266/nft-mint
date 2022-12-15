@@ -6,9 +6,7 @@ async function main() {
 
   await roboPunksNFT.deployed();
 
-  console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${roboPunksNFT.address}`
-  );
+  console.log(`deployed to ${roboPunksNFT.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
