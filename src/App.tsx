@@ -2,13 +2,11 @@ import { useState } from "react";
 import { MainMint } from "./components/MainMint";
 import { Navbar } from "./components/Navbar";
 
-import "./App.css";
-
 function App() {
   const [accounts, setAccounts] = useState<string[]>([]);
 
   return (
-    <div className="App">
+    <div className="max-w-7xl mx-auto">
       <Navbar accounts={accounts} setAccounts={setAccounts} />
       <MainMint accounts={accounts} setAccounts={setAccounts} />
     </div>
