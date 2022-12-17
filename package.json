@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",
-    "framer-motion": "^7.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

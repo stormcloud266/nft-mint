@@ -29,6 +29,7 @@ contract RoboPunksNFT is ERC721, Ownable {
     isPublicMintEnabled = _isPublicMintEnabled;
   }
 
+  // base uri for token metadata, tokeURI() appends tokenId and .json to this uri
   function setBaseTokenUri(string calldata _baseTokenUri) external onlyOwner {
     baseTokenUri = _baseTokenUri;
   }

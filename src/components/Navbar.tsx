@@ -1,4 +1,5 @@
-import { Accounts } from "../utils/types";
+import { Accounts } from "../types";
+import { truncate } from "../utils";
 
 export const Navbar = ({ accounts, setAccounts }: Accounts) => {
   const isConnected = Boolean(accounts[0]);
@@ -14,18 +15,18 @@ export const Navbar = ({ accounts, setAccounts }: Accounts) => {
   };
 
   return (
-    <nav className="flex justify-between items-center py-2">
+    <nav className="flex justify-between items-center py-4">
       <h1 className="text-2xl text-white font-bold uppercase">
         Minty<span className="font-light text-purple-300">Fresh</span>
       </h1>
       {isConnected ? (
-        <p className="text-purple-300">connected</p>
+        <p className="text-purple-300">{truncate(accounts[0])}</p>
       ) : (
         <button
           className="bg-white/10 text-purple-300 rounded-md py-1 px-4"
           onClick={connectWallet}
         >
-          click
+          Connect Wallet
         </button>
       )}
     </nav>
